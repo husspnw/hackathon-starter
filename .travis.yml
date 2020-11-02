@@ -8,10 +8,8 @@ cache:
 sudo: false
 install:
   - npm install
-script:
 deploy:
-  - provider: script
-    skip_cleanup: true
+  - skip_cleanup: true
     script: chmod +x ./deploy.sh && ./deploy.sh
     on:
       branch: master
